@@ -1,9 +1,4 @@
-<!-- Make the content flow from left to right. You will need to figure out which ID and class you need to target and how to make it display (approximately) like above. Hint: think about what you learned in the previous CSS positioning exercise.
-
-Once you have made your menu items into active hyperlinks be careful not to click on them in the netnet preview window. It's fine to hover over them, but don't open them unless you click on 'open in new tab' or you might lose your netnet sketch-in-progress.
-
-Write some HTML and CSS to create a horizontal navigation for the webpage where the text (or menu buttons) changes colour when you hover over them.
-To do this, you must target <ul> and/or <li> elements in the nav div.
+<!-- 
 Remember the display and position selectors from last week! You will need them to make your menu flow from left to right. You will also need to figure out how to target a link when you hover over it (in order to make it change colour) .-->
 <!DOCTYPE html>
 <html lang="eng-ca">
@@ -141,10 +136,12 @@ Remember the display and position selectors from last week! You will need them t
       }
 
       a{
-        color:rgb(255,255,255);
+        color: rgb(255,255,255);
         text-decoration: none;
-        
       }
+      a:hover {
+        color: hotpink;
+          }
       
     </style>
 
