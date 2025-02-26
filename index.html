@@ -1,0 +1,196 @@
+<!-- Make the content flow from left to right. You will need to figure out which ID and class you need to target and how to make it display (approximately) like above. Hint: think about what you learned in the previous CSS positioning exercise.
+
+Once you have made your menu items into active hyperlinks be careful not to click on them in the netnet preview window. It's fine to hover over them, but don't open them unless you click on 'open in new tab' or you might lose your netnet sketch-in-progress.
+
+Write some HTML and CSS to create a horizontal navigation for the webpage where the text (or menu buttons) changes colour when you hover over them.
+To do this, you must target <ul> and/or <li> elements in the nav div.
+Remember the display and position selectors from last week! You will need them to make your menu flow from left to right. You will also need to figure out how to target a link when you hover over it (in order to make it change colour) .-->
+<!DOCTYPE html>
+<html lang="eng-ca">
+  <head>
+    <meta charset="utc-8">
+    <title>Exercise 6: Navigation</title>
+    <!-- This is code to embed/employ Google Fonts in the site design, we'll learn more about this next week--->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- End of Google Fonts embed--->
+    <style>
+      #header,
+      .courses,
+      #footer,
+      #sidebar,
+      #nav,
+      .article,
+      figure,
+      figcaption {
+        display: block;
+      }
+
+      body {
+        color: #666666;
+        background-color: #f9f8f6;
+        background-image: url("https://i.imgur.com/px0ic4P.jpg");
+        background-position: center;
+        font-family: "Roboto", Times, serif;
+        line-height: 1.4em;
+        margin: 0px;
+      }
+
+      .wrapper {
+        width: 940px;
+        margin: 20px auto 20px auto;
+        border: 2px solid #000000;
+        background-color: #ffffff;
+      }
+
+      #header {
+        height: 160px;
+        background-image: url("https://i.imgur.com/4rcWA3C.jpg");
+      }
+
+      h1 {
+        text-indent: -9999px;
+        width: 940px;
+        height: 130px;
+        margin: 0px;
+      }
+
+      #footer {
+        clear: both;
+        color: #ffffff;
+        background-color: #aeaca8;
+        height: 30px;
+        font-size: 80%;
+        padding: 7px 0px 0px 20px;
+      }
+
+      .courses {
+        border-right: 10px solid #eeeeee;
+      }
+
+      .article {
+        clear: both;
+        overflow: auto;
+        width: 64%;
+        float: left;
+      }
+
+      .hgroup {
+        margin-top: 40px;
+      }
+
+      figure {
+        float: left;
+        width: 290px;
+        height: 220px;
+        padding: 5px;
+        margin: 20px;
+        border: 1px solid #eeeeee;
+      }
+
+      figcaption {
+        font-size: 90%;
+        text-align: left;
+        font-weight: 300;
+        font-style: normal;
+      }
+
+      #sidebar {
+        padding: 0px 15px 0px 15px;
+      }
+
+      h2 {
+        margin: 10px 0px 5px 0px;
+        padding: 0px;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      h3 {
+        margin: 0px 0px 10px 0px;
+        color: #de6581;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      #sidebar h2 {
+        padding: 30px 0px 10px 0px;
+      }
+      
+      #nav {
+        height: 50px;
+        color: rgb(128,128,128);
+      }
+    
+      li{
+        float: left;
+        padding: 0px 0px 0px 20px;
+        font-color:rgb(255,255,255);
+      }
+      
+    </style>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="header">
+        <h1>Yoko's Kitchen</h1>
+        <div id="nav">
+          <ul>
+      <li> <a href="empty">Home</a> </li>
+      <li> <a href="empty">Classes</a> </li>
+      <li> <a href="empty">Catering</a> </li>
+      <li> <a href="empty">About</a> </li>
+          </ul>
+          <!--
+                    Instructions: Add a list using the <ul> element and the <li> element to create a link for each menu item. Set the href value to empty. Normally you would put the relative path of page you are linking to, but we are creating a placeholder.
+                    -->
+        </div>
+      </div>
+      <div class="courses">
+        <div class="article">
+          <figure>
+            <img src="https://i.imgur.com/GaC5TSH.jpg" alt="Bok Choi">
+            <figcaption>Bok Choi</figcaption>
+          </figure>
+          <div class="hgroup">
+            <h2>Japanese Vegetarian</h2>
+            <h3>Five week course in London</h3>
+          </div>
+          <p>A five week introduction to traditional Japanese vegetarian meals, tefaching you a selection of rice and noodle dishes.</p>
+        </div>
+        <div class="article">
+          <figure>
+            <img src="https://i.imgur.com/dd27k4P.jpg" alt="Teriyaki sauce">
+            <figcaption>Teriyaki Sauce</figcaption>
+          </figure>
+          <div class="hgroup">
+            <h2>Sauces Masterclass</h2>
+            <h3>One day workshop</h3>
+          </div>
+          <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
+        </div>
+      </div>
+      <div id="sidebar">
+        <div class="popular-recipes">
+          <h2>Popular Recipes</h2>
+          Yakitori (grilled chicken)
+          Tsukune (minced chicken patties)
+          Okonomiyaki (savory pancakes)
+          Mizutaki (chicken stew)
+        </div>
+        <div class="contact-details">
+          <h2>Contact</h2>
+          <p>Yoko's Kitchen<br>
+            27 Redchurch Street<br>
+            Shoreditch<br>
+            London E2 7DP</p>
+        </div>
+      </div>
+      <div id="footer">
+        &copy; 2024 Yoko's Kitchen
+      </div>
+    </div>
+  </body>
+</html>
