@@ -66,14 +66,16 @@ Remember the display and position selectors from last week! You will need them t
       }
 
       .courses {
-        border-right: 10px solid #eeeeee;
+        border-right: 1px solid grey;
+        width: 64%;
+        float: left;
+        
       }
 
       .article {
         clear: both;
         overflow: auto;
-        width: 64%;
-        float: left;
+        
       }
 
       .hgroup {
@@ -119,14 +121,24 @@ Remember the display and position selectors from last week! You will need them t
       }
       
       #nav {
-        height: 50px;
-        color: rgb(128,128,128);
-      }
+        height: 40px;
+        background-color: rgb(50,50,5);
+         }
     
       li{
         float: left;
-        padding: 0px 0px 0px 20px;
-        font-color:rgb(255,255,255);
+        padding: 10px 0px 0px 20px;
+        
+      }
+      
+      ul {
+        list-style-type: none;
+      }
+
+      a{
+        color:rgb(255,255,255);
+        text-decoration: none;
+        
       }
       
     </style>
@@ -138,16 +150,15 @@ Remember the display and position selectors from last week! You will need them t
         <h1>Yoko's Kitchen</h1>
         <div id="nav">
           <ul>
-      <li> <a href="empty">Home</a> </li>
-      <li> <a href="empty">Classes</a> </li>
-      <li> <a href="empty">Catering</a> </li>
-      <li> <a href="empty">About</a> </li>
+      <li> <a href="empty">HOME</a> </li>
+      <li> <a href="empty">CLASSES</a> </li>
+      <li> <a href="empty">CATERING</a> </li>
+      <li> <a href="empty">ABOUT</a> </li>
           </ul>
-          <!--
-                    Instructions: Add a list using the <ul> element and the <li> element to create a link for each menu item. Set the href value to empty. Normally you would put the relative path of page you are linking to, but we are creating a placeholder.
-                    -->
         </div>
       </div>
+      
+      
       <div class="courses">
         <div class="article">
           <figure>
@@ -160,6 +171,8 @@ Remember the display and position selectors from last week! You will need them t
           </div>
           <p>A five week introduction to traditional Japanese vegetarian meals, tefaching you a selection of rice and noodle dishes.</p>
         </div>
+        
+        
         <div class="article">
           <figure>
             <img src="https://i.imgur.com/dd27k4P.jpg" alt="Teriyaki sauce">
@@ -172,6 +185,7 @@ Remember the display and position selectors from last week! You will need them t
           <p>An intensive one-day course looking at how to create the most delicious sauces for use in a range of Japanese cookery.</p>
         </div>
       </div>
+      
       <div id="sidebar">
         <div class="popular-recipes">
           <h2>Popular Recipes</h2>
